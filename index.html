@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>India as a System</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 24px 7%;
+      border-bottom: 1px solid #20334d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #28d7ff;
+    }
+
+    .status {
+      background: #102b3d;
+      color: #54e6a5;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 70px 7% 40px;
+      max-width: 1100px;
+    }
+
+    .tag {
+      color: #28d7ff;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: #28d7ff;
+    }
+
+    .hero p {
+      color: #a9b8c9;
+      font-size: 18px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .dashboard {
+      padding: 20px 7% 70px;
+    }
+
+    .section-title {
+      margin-bottom: 20px;
+      color: #dbe8f5;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .level {
+      padding: 18px 10px;
+      background: #0d1c2d;
+      border: 1px solid #203a57;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .level:hover {
+      border-color: #28d7ff;
+      transform: translateY(-2px);
+    }
+
+    .level.active {
+      background: #10344a;
+      border-color: #28d7ff;
+    }
+
+    .level small {
+      display: block;
+      color: #7f94aa;
+      margin-top: 6px;
+    }
+
+    .systems {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .system {
+      background: #0d1c2d;
+      border: 1px solid #203a57;
+      border-radius: 14px;
+      padding: 20px;
+      min-height: 120px;
+    }
+
+    .system .icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .system h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .system p {
+      color: #8194a8;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .whatif {
+      background: linear-gradient(135deg, #0c1d31, #0a2636);
+      border: 1px solid #22516b;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .whatif h2 {
+      margin-bottom: 8px;
+    }
+
+    .whatif > p {
+      color: #91a5b9;
+      margin-bottom: 20px;
+    }
+
+    .scenario {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 1px solid #2c5970;
+      background: #102b3d;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #17445a;
+      border-color: #28d7ff;
+    }
+
+    #result {
+      margin-top: 25px;
+      display: none;
+    }
+
+    .impact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .impact-card {
+      background: #071522;
+      border: 1px solid #1d3b4d;
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    .impact-card strong {
+      display: block;
+      color: #28d7ff;
+      margin-bottom: 6px;
+    }
+
+    .impact-card span {
+      color: #b6c4d1;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #65788b;
+      border-top: 1px solid #182b40;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .levels,
+      .systems {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .impact {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🇮🇳 INDIA <span>AS A SYSTEM</span></div>
+    <div class="status">● SYSTEM ONLINE</div>
+  </header>
+
+  <section class="hero">
+    <div class="tag">SYSTEM INTELLIGENCE PLATFORM</div>
+
+    <h1>
+      See India<br>
+      <span>as one system.</span>
+    </h1>
+
+    <p>
+      Understand how people, infrastructure, economy,
+      environment and technology interact — from a village
+      to the nation.
+    </p>
+  </section>
+
+  <section class="dashboard">
+
+    <h2 class="section-title">System Scale</h2>
+
+    <div class="levels">
+      <div class="level active" onclick="selectLevel('Village')">
+        🏘️ Village
+        <small>Local</small>
+      </div>
+
+      <div class="level" onclick="selectLevel('District')">
+        🏙️ District
+        <small>Regional</small>
+      </div>
+
+      <div class="level" onclick="selectLevel('State')">
+        🗺️ State
+        <small>Statewide</small>
+      </div>
+
+      <div class="level" onclick="selectLevel('National')">
+        🇮🇳 National
+        <small>India</small>
+      </div>
+
+      <div class="level" onclick="selectLevel('Global')">
+        🌐 Global
+        <small>World</small>
+      </div>
+    </div>
+
+    <h2 class="section-title">Connected Systems</h2>
+
+    <div class="systems">
+
+      <div class="system">
+        <div class="icon">🌾</div>
+        <h3>Agriculture</h3>
+        <p>Food, water, farming and supply chains.</p>
+      </div>
+
+      <div class="system">
+        <div class="icon">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Hospitals, doctors, medicines and access.</p>
+      </div>
+
+      <div class="system">
+        <div class="icon">🎓</div>
+        <h3>Education</h3>
+        <p>Schools, skills and future workforce.</p>
+      </div>
+
+      <div class="system">
+        <div class="icon">🚆</div>
+        <h3>Transport</h3>
+        <p>Roads, railways, logistics and mobility.</p>
+      </div>
+
+      <div class="system">
+        <div class="icon">💰</div>
+        <h3>Economy</h3>
+        <p>Jobs, businesses, markets and industry.</p>
+      </div>
+
+    </div>
+
+    <div class="whatif">
+
+      <h2>🔮 What-If Engine</h2>
+
+      <p>
+        Select a scenario and see how one change can affect
+        multiple connected systems.
+      </p>
+
+      <div class="scenario">
+
+        <button onclick="showImpact('hospital')">
+          🏥 New Hospital
+        </button>
+
+        <button onclick="showImpact('industry')">
+          🏭 New Industry
+        </button>
+
+        <button onclick="showImpact('road')">
+          🛣️ New Highway
+        </button>
+
+        <button onclick="showImpact('rainfall')">
+          🌧️ Low Rainfall
+        </button>
+
+      </div>
+
+      <div id="result"></div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    India as a System — Prototype
+  </footer>
+
+
+  <script>
+
+    function selectLevel(level) {
+
+      document.querySelectorAll('.level')
+        .forEach(item => item.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+
+      alert("System scale selected: " + level);
+    }
+
+
+    function showImpact(type) {
+
+      const result = document.getElementById("result");
+
+      let title = "";
+      let cards = "";
+
+      if (type === "hospital") {
+
+        title = "🏥 New Hospital — Potential System Impact";
+
+        cards = `
+          <div class="impact-card">
+            <strong>Healthcare ↑</strong>
+            <span>Healthcare capacity and accessibility may increase.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Employment ↑</strong>
+            <span>Doctors, nurses, technicians and support jobs.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Transport ↑</strong>
+            <span>Ambulance and patient mobility requirements may change.</span>
+          </div>
+        `;
+
+      }
+
+      if (type === "industry") {
+
+        title = "🏭 New Industry — Potential System Impact";
+
+        cards = `
+          <div class="impact-card">
+            <strong>Employment ↑</strong>
+            <span>New direct and indirect employment opportunities.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Migration ↗️</strong>
+            <span>Population movement and housing demand may change.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Infrastructure ↑</strong>
+            <span>Energy, water and transport demand may increase.</span>
+          </div>
+        `;
+
+      }
+
+      if (type === "road") {
+
+        title = "🛣️ New Highway — Potential System Impact";
+
+        cards = `
+          <div class="impact-card">
+            <strong>Connectivity ↑</strong>
+            <span>Travel time and accessibility may improve.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Economy ↑</strong>
+            <span>Market access and logistics opportunities may change.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Land Use ↗️</strong>
+            <span>Development patterns around the corridor may change.</span>
+          </div>
+        `;
+
+      }
+
+      if (type === "rainfall") {
+
+        title = "🌧️ Low Rainfall — Potential System Cascade";
+
+        cards = `
+          <div class="impact-card">
+            <strong>Water ↓</strong>
+            <span>Reservoir and groundwater availability may decline.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Agriculture ↓</strong>
+            <span>Crop production may face water stress.</span>
+          </div>
+
+          <div class="impact-card">
+            <strong>Economy ↗️</strong>
+            <span>Supply and local income may experience pressure.</span>
+          </div>
+        `;
+
+      }
+
+      result.innerHTML = `
+        <h3>${title}</h3>
+        <div class="impact">${cards}</div>
+      `;
+
+      result.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
