@@ -396,6 +396,13 @@
         display: block;
         color: var(--navy);
         margin-bottom: 3px;
+        background: #fff;
+        border: 1px solid #d5e5dc;
+        padding: 11px;
+        border-radius: 8px;
+        color: #365248;
+        font-size: 0.86rem;
+        font-weight: 650;
       }
       .detail-connection {
         grid-column: 1 / -1;
@@ -1582,6 +1589,509 @@
           </div>
         </div>
       </section>
+          </div>
+          <div class="levels" role="group" aria-label="Select a system scale">
+            <button
+              class="level active"
+              type="button"
+              onclick="selectLevel('Village', event)"
+              aria-pressed="true"
+            >
+              <span class="level-icon">🏘️</span><strong>Village</strong
+              ><small>Local services</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('District', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🏙️</span><strong>District</strong
+              ><small>Regional delivery</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('State', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🗺️</span><strong>State</strong
+              ><small>Statewide systems</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('National', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🇮🇳</span><strong>National</strong
+              ><small>India-wide view</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('Global', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🌐</span><strong>Global</strong
+              ><small>International links</small>
+            </button>
+          </div>
+          <div class="level-details" id="level-details" aria-live="polite">
+            <div>
+              <span class="demo-label">Example focus areas</span>
+              <h3 class="detail-title">Village level</h3>
+              <p class="detail-copy">
+                Illustrative local systems and everyday services.
+              </p>
+            </div>
+            <ul class="detail-list">
+              <li>Local infrastructure</li>
+              <li>Water and sanitation</li>
+              <li>Agriculture</li>
+              <li>Schools</li>
+              <li>Primary healthcare</li>
+              <li>Local services</li>
+            </ul>
+            <p class="detail-connection">
+              <strong>Connection to the next level:</strong> Village needs and
+              service outcomes can inform district planning and coordination.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="connected-systems">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Interdependent services</span>
+              <h2>Connected Systems</h2>
+            </div>
+            <p>
+              Explore representative sectors that shape daily life. Select a
+              card to bring it into focus and see how it can relate to other
+              public systems.
+            </p>
+          </div>
+          <div class="systems">
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🌾</div>
+              <h3>Agriculture</h3>
+              <p>
+                Food, water, farming practices and supply chains; connected to
+                markets, transport and environment.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🏥</div>
+              <h3>Healthcare</h3>
+              <p>
+                Care access, facilities and prevention; connected to water,
+                transport and digital services.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🎓</div>
+              <h3>Education</h3>
+              <p>
+                Learning access, skills and workforce; connected to transport,
+                digital services and employment.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🚆</div>
+              <h3>Transport</h3>
+              <p>
+                Roads, railways and mobility; connected to market access, care
+                and education.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">⚡</div>
+              <h3>Energy</h3>
+              <p>
+                Reliable power for homes and enterprise; connected to
+                healthcare, industry and digital access.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">▣</div>
+              <h3>Digital Services</h3>
+              <p>
+                Accessible digital public-service pathways; connected to
+                finance, education and service access.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">₹</div>
+              <h3>Finance</h3>
+              <p>
+                Household resilience and local enterprise; connected to
+                livelihoods, agriculture and services.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🌱</div>
+              <h3>Environment</h3>
+              <p>
+                Water, climate resilience and natural resources; connected to
+                agriculture, health and infrastructure.
+              </p>
+            </article>
+          </div>
+          <div class="whatif">
+            <h2>🔮 What-If Engine</h2>
+            <p>
+              Select a scenario and see how one change can affect multiple
+              connected systems. These are illustrative pathways only.
+            </p>
+            <div class="scenario">
+              <button type="button" onclick="showImpact('hospital', event)">
+                🏥 New Hospital</button
+              ><button type="button" onclick="showImpact('industry', event)">
+                🏭 New Industry</button
+              ><button type="button" onclick="showImpact('road', event)">
+                🛣️ New Highway</button
+              ><button type="button" onclick="showImpact('rainfall', event)">
+                🌧️ Low Rainfall
+              </button>
+            </div>
+            <div id="result" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section news-section" id="news">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Knowledge centre</span>
+              <h2>News &amp; Articles</h2>
+            </div>
+            <p>
+              Sample articles show the kinds of neutral, public-systems topics
+              this platform could make easier to explore.
+            </p>
+          </div>
+          <div class="article-grid">
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Public services · 12 Sep 2026</span>
+              </div>
+              <h3>Designing easier journeys to essential services</h3>
+              <p>
+                An illustrative look at how clearer service information can help
+                people navigate local public systems with greater confidence.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Infrastructure · 05 Sep 2026</span>
+              </div>
+              <h3>Connecting infrastructure planning with community needs</h3>
+              <p>
+                This demonstration story considers how transport, water and
+                social infrastructure can be viewed together during planning.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Education · 28 Aug 2026</span>
+              </div>
+              <h3>Learning access as a connected system</h3>
+              <p>
+                A sample perspective on the relationships between schools,
+                connectivity, transport and local support for learners.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+          </div>
+          <article
+            class="article-detail"
+            id="article-detail"
+            aria-live="polite"
+            aria-label="Sample article detail"
+          >
+            <div class="article-detail-header">
+              <div>
+                <span class="demo-label" id="article-detail-meta"
+                  >Sample article</span
+                >
+                <h3 id="article-detail-title">Sample article detail</h3>
+              </div>
+              <button
+                class="article-close"
+                type="button"
+                onclick="closeArticle()"
+              >
+                Close
+              </button>
+            </div>
+            <p id="article-detail-body"></p>
+          </article>
+        </div>
+      </section>
+      <section class="section impact-section" id="public-impact">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Illustrative outcomes</span>
+              <h2>Public Impact</h2>
+            </div>
+            <p>
+              All figures in this section are DEMO DATA, intended solely to
+              demonstrate a clear way of presenting service and project
+              outcomes.
+            </p>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>12,500</strong
+              ><span>People reached</span>
+              <div class="meter"><i style="width: 78%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>36</strong
+              ><span>Services improved</span>
+              <div class="meter"><i style="width: 64%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>240</strong
+              ><span>Jobs supported</span>
+              <div class="meter"><i style="width: 71%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>18</strong
+              ><span>Infrastructure assets supported</span>
+              <div class="meter"><i style="width: 69%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>₹6.8cr</strong
+              ><span>Estimated funds used</span>
+              <div class="meter"><i style="width: 82%"></i></div>
+            </div>
+          </div>
+          <article class="case-study">
+            <div class="case-header">
+              <div>
+                <span class="demo-label">Demo data · example case study</span>
+                <h3>Sample Infrastructure Improvement Project</h3>
+                <p>
+                  An example of how allocation, use, progress and public impact
+                  could be presented transparently.
+                </p>
+              </div>
+              <span class="demo-label">Illustrative only</span>
+            </div>
+            <div class="case-body">
+              <div class="funding-list">
+                <div class="funding-item">
+                  <span>Total allocated amount</span
+                  ><strong>₹10.0 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Amount used</span><strong>₹6.8 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Remaining amount</span><strong>₹3.2 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Project progress</span><strong>68% complete</strong>
+                </div>
+                <div class="funding-item">
+                  <span>People / services impacted</span
+                  ><strong>Illustrative: 12,500</strong>
+                </div>
+              </div>
+              <div>
+                <p class="chart-title">
+                  Illustrative Project Funding &amp; Impact
+                </p>
+                <div class="bar-row">
+                  <span>Planned funding</span>
+                  <div class="bar">
+                    <i class="allocated" style="width: 100%"></i>
+                  </div>
+                  <strong>₹10.0cr</strong>
+                </div>
+                <div class="bar-row">
+                  <span>Used</span>
+                  <div class="bar"><i class="used" style="width: 68%"></i></div>
+                  <strong>₹6.8cr</strong>
+                </div>
+                <div class="bar-row">
+                  <span>People reached*</span>
+                  <div class="bar">
+                    <i class="remaining" style="width: 83%"></i>
+                  </div>
+                  <strong>12.5k</strong>
+                </div>
+                <div class="legend">
+                  <span><i class="allocated"></i>Allocated</span
+                  ><span><i class="used"></i>Used</span
+                  ><span><i class="remaining"></i>People reached*</span>
+                </div>
+                <p class="chart-note">
+                  *Illustrative scaled indicator; not a real public statistic.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="feedback">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Illustrative voices</span>
+              <h2>Public Response</h2>
+            </div>
+            <p>
+              These examples are clearly labelled Sample Public Feedback. They
+              are not statements from real citizens.
+            </p>
+          </div>
+          <div class="feedback-grid">
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “The service journey is easier to understand when local support
+                information is shown in one place.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “Seeing transport and healthcare together helps explain how
+                access can improve for a community.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “The example dashboards make public-system information feel
+                clearer and more approachable.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section help-section" id="support">
+        <div class="container help-grid">
+          <div class="help-copy">
+            <span class="eyebrow">Help &amp; Support</span>
+            <h3>Understand the system, at your own pace.</h3>
+            <p>
+              Start with System Scale, select a level, then explore connected
+              sectors and the What-If Engine. All project and impact values on
+              this page are examples.
+            </p>
+            <div class="support-box">
+              <strong>Support placeholder:</strong>&nbsp;
+              support@indiaasasystem.example
+            </div>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>How does the system work?</summary>
+              <p>
+                It organizes example public-service themes across administrative
+                levels, then shows how connected systems may influence one
+                another.
+              </p>
+            </details>
+            <details>
+              <summary>How do I navigate System Scale?</summary>
+              <p>
+                Select Village, District, State, National or Global. The example
+                focus areas update below the selected scale card.
+              </p>
+            </details>
+            <details>
+              <summary>Are the figures and articles real?</summary>
+              <p>
+                No. All articles, feedback, metrics and case-study figures are
+                prominently labelled as sample or demo content.
+              </p>
+            </details>
+            <details>
+              <summary>How do I use What-If scenarios?</summary>
+              <p>
+                Choose one scenario to reveal an illustrative pathway across
+                connected systems. These pathways are examples, not forecasts.
+              </p>
+            </details>
+            <details>
+              <summary>Where can I get support?</summary>
+              <p>
+                Use the placeholder support contact above. A production version
+                can replace it with an approved support channel.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="container">
@@ -1768,6 +2278,10 @@
           const detailButton = event.target.closest("[data-detail-key]");
           if (detailButton) selectDetail(detailButton);
         });
+        const [title, description, items, connection] = levelData[level];
+        document.getElementById("level-details").innerHTML =
+          `<div><span class="demo-label">Example focus areas</span><h3 class="detail-title">${title}</h3><p class="detail-copy">${description}</p></div><ul class="detail-list">${items.map((item) => `<li>${item}</li>`).join("")}</ul><p class="detail-connection"><strong>Connection to the next level:</strong> ${connection}</p>`;
+      }
       function showImpact(type, event) {
         const result = document.getElementById("result");
         document
