@@ -368,6 +368,16 @@
         font-size: 0.86rem;
         font-weight: 650;
       }
+      .detail-connection {
+        grid-column: 1 / -1;
+        border-top: 1px solid #cfe0d7;
+        padding-top: 14px;
+        color: #405d50;
+        font-size: 0.88rem;
+      }
+      .detail-connection strong {
+        color: var(--navy);
+      }
       .systems {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -515,6 +525,48 @@
         min-height: 36px;
         font-size: 0.82rem;
       }
+      .article-detail {
+        display: none;
+        margin-top: 18px;
+        border: 1px solid #cbdcd3;
+        border-radius: 13px;
+        padding: 22px;
+        background: #f1f8f4;
+      }
+      .article-detail.visible {
+        display: block;
+      }
+      .article-detail-header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .article-detail h3 {
+        color: var(--navy);
+        font-size: 1.15rem;
+        margin: 9px 0 7px;
+      }
+      .article-detail p {
+        color: #4e625d;
+        max-width: 800px;
+      }
+      .article-close {
+        flex: 0 0 auto;
+        border: 1px solid #adc5b8;
+        border-radius: 8px;
+        padding: 7px 10px;
+        background: #fff;
+        color: var(--navy);
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .article-close:hover,
+      .article-close:focus-visible {
+        outline: none;
+        border-color: var(--green);
+        color: var(--green);
+      }
       .impact-section {
         background: #f7faf9;
       }
@@ -657,6 +709,11 @@
         height: 9px;
         border-radius: 2px;
         margin-right: 4px;
+      }
+      .chart-note {
+        color: var(--muted);
+        font-size: 0.73rem;
+        margin-top: 12px;
       }
       .feedback-grid {
         display: grid;
@@ -869,7 +926,8 @@
         <div class="nav-links">
           <a href="#system-scale">System Scale</a
           ><a href="#connected-systems">Connected Systems</a
-          ><a href="#news">News</a><a href="#support">Help</a>
+          ><a href="#news">News &amp; Articles</a
+          ><a href="#support">Help &amp; Support</a>
         </div>
         <span class="status">● DEMO PLATFORM</span>
       </nav>
@@ -995,6 +1053,10 @@
               <li>Primary healthcare</li>
               <li>Local services</li>
             </ul>
+            <p class="detail-connection">
+              <strong>Connection to the next level:</strong> Village needs and
+              service outcomes can inform district planning and coordination.
+            </p>
           </div>
         </div>
       </section>
@@ -1020,7 +1082,10 @@
             >
               <div class="icon">🌾</div>
               <h3>Agriculture</h3>
-              <p>Food, water, farming practices and supply chains.</p>
+              <p>
+                Food, water, farming practices and supply chains; connected to
+                markets, transport and environment.
+              </p>
             </article>
             <article
               class="system"
@@ -1030,7 +1095,10 @@
             >
               <div class="icon">🏥</div>
               <h3>Healthcare</h3>
-              <p>Care access, facilities, medicines and preventive services.</p>
+              <p>
+                Care access, facilities and prevention; connected to water,
+                transport and digital services.
+              </p>
             </article>
             <article
               class="system"
@@ -1040,7 +1108,10 @@
             >
               <div class="icon">🎓</div>
               <h3>Education</h3>
-              <p>Schools, learning access, skills and future workforce.</p>
+              <p>
+                Learning access, skills and workforce; connected to transport,
+                digital services and employment.
+              </p>
             </article>
             <article
               class="system"
@@ -1050,7 +1121,10 @@
             >
               <div class="icon">🚆</div>
               <h3>Transport</h3>
-              <p>Roads, railways, logistics and everyday mobility.</p>
+              <p>
+                Roads, railways and mobility; connected to market access, care
+                and education.
+              </p>
             </article>
             <article
               class="system"
@@ -1060,7 +1134,10 @@
             >
               <div class="icon">⚡</div>
               <h3>Energy</h3>
-              <p>Reliable power for homes, services and enterprise.</p>
+              <p>
+                Reliable power for homes and enterprise; connected to
+                healthcare, industry and digital access.
+              </p>
             </article>
             <article
               class="system"
@@ -1070,7 +1147,10 @@
             >
               <div class="icon">▣</div>
               <h3>Digital Services</h3>
-              <p>Accessible digital pathways for public services.</p>
+              <p>
+                Accessible digital public-service pathways; connected to
+                finance, education and service access.
+              </p>
             </article>
             <article
               class="system"
@@ -1080,7 +1160,10 @@
             >
               <div class="icon">₹</div>
               <h3>Finance</h3>
-              <p>Household resilience, local enterprise and access.</p>
+              <p>
+                Household resilience and local enterprise; connected to
+                livelihoods, agriculture and services.
+              </p>
             </article>
             <article
               class="system"
@@ -1090,7 +1173,10 @@
             >
               <div class="icon">🌱</div>
               <h3>Environment</h3>
-              <p>Water, climate resilience and natural resources.</p>
+              <p>
+                Water, climate resilience and natural resources; connected to
+                agriculture, health and infrastructure.
+              </p>
             </article>
           </div>
           <div class="whatif">
@@ -1182,6 +1268,29 @@
               </button>
             </article>
           </div>
+          <article
+            class="article-detail"
+            id="article-detail"
+            aria-live="polite"
+            aria-label="Sample article detail"
+          >
+            <div class="article-detail-header">
+              <div>
+                <span class="demo-label" id="article-detail-meta"
+                  >Sample article</span
+                >
+                <h3 id="article-detail-title">Sample article detail</h3>
+              </div>
+              <button
+                class="article-close"
+                type="button"
+                onclick="closeArticle()"
+              >
+                Close
+              </button>
+            </div>
+            <p id="article-detail-body"></p>
+          </article>
         </div>
       </section>
       <section class="section impact-section" id="public-impact">
@@ -1199,28 +1308,28 @@
           </div>
           <div class="metric-grid">
             <div class="metric">
-              <span class="demo-label">Demo data</span><strong>78%</strong
-              ><span>Service accessibility</span>
+              <span class="demo-label">Demo data</span><strong>12,500</strong
+              ><span>People reached</span>
               <div class="meter"><i style="width: 78%"></i></div>
             </div>
             <div class="metric">
-              <span class="demo-label">Demo data</span><strong>64%</strong
-              ><span>Infrastructure improvement</span>
+              <span class="demo-label">Demo data</span><strong>36</strong
+              ><span>Services improved</span>
               <div class="meter"><i style="width: 64%"></i></div>
             </div>
             <div class="metric">
-              <span class="demo-label">Demo data</span><strong>71%</strong
-              ><span>Healthcare access</span>
+              <span class="demo-label">Demo data</span><strong>240</strong
+              ><span>Jobs supported</span>
               <div class="meter"><i style="width: 71%"></i></div>
             </div>
             <div class="metric">
-              <span class="demo-label">Demo data</span><strong>69%</strong
-              ><span>Education access</span>
+              <span class="demo-label">Demo data</span><strong>18</strong
+              ><span>Infrastructure assets supported</span>
               <div class="meter"><i style="width: 69%"></i></div>
             </div>
             <div class="metric">
-              <span class="demo-label">Demo data</span><strong>82%</strong
-              ><span>Public satisfaction</span>
+              <span class="demo-label">Demo data</span><strong>₹6.8cr</strong
+              ><span>Estimated funds used</span>
               <div class="meter"><i style="width: 82%"></i></div>
             </div>
           </div>
@@ -1257,9 +1366,11 @@
                 </div>
               </div>
               <div>
-                <p class="chart-title">Funding status — illustrative amounts</p>
+                <p class="chart-title">
+                  Illustrative Project Funding &amp; Impact
+                </p>
                 <div class="bar-row">
-                  <span>Allocated</span>
+                  <span>Planned funding</span>
                   <div class="bar">
                     <i class="allocated" style="width: 100%"></i>
                   </div>
@@ -1271,17 +1382,20 @@
                   <strong>₹6.8cr</strong>
                 </div>
                 <div class="bar-row">
-                  <span>Remaining</span>
+                  <span>People reached*</span>
                   <div class="bar">
-                    <i class="remaining" style="width: 32%"></i>
+                    <i class="remaining" style="width: 83%"></i>
                   </div>
-                  <strong>₹3.2cr</strong>
+                  <strong>12.5k</strong>
                 </div>
                 <div class="legend">
                   <span><i class="allocated"></i>Allocated</span
                   ><span><i class="used"></i>Used</span
-                  ><span><i class="remaining"></i>Remaining</span>
+                  ><span><i class="remaining"></i>People reached*</span>
                 </div>
+                <p class="chart-note">
+                  *Illustrative scaled indicator; not a real public statistic.
+                </p>
               </div>
             </div>
           </article>
@@ -1366,6 +1480,13 @@
               </p>
             </details>
             <details>
+              <summary>How do I use What-If scenarios?</summary>
+              <p>
+                Choose one scenario to reveal an illustrative pathway across
+                connected systems. These pathways are examples, not forecasts.
+              </p>
+            </details>
+            <details>
               <summary>Where can I get support?</summary>
               <p>
                 Use the placeholder support contact above. A production version
@@ -1418,6 +1539,7 @@
             "Primary healthcare",
             "Local services",
           ],
+          "Village needs and service outcomes can inform district planning and coordination.",
         ],
         District: [
           "District level",
@@ -1430,6 +1552,7 @@
             "Agriculture",
             "Public services",
           ],
+          "District coordination connects local delivery with state-level networks and resources.",
         ],
         State: [
           "State level",
@@ -1442,6 +1565,7 @@
             "Agriculture",
             "State-level services",
           ],
+          "State systems translate shared priorities into programmes that align with national frameworks.",
         ],
         National: [
           "National level",
@@ -1454,6 +1578,7 @@
             "Digital services",
             "National programmes",
           ],
+          "National infrastructure and programmes can connect India’s systems with international partners and standards.",
         ],
         Global: [
           "Global level",
@@ -1466,6 +1591,7 @@
             "International connections",
             "Knowledge exchange",
           ],
+          "Global cooperation and knowledge exchange can inform national and local resilience efforts.",
         ],
       };
       function selectLevel(level, event) {
@@ -1478,9 +1604,9 @@
           selected.classList.add("active");
           selected.setAttribute("aria-pressed", "true");
         }
-        const [title, description, items] = levelData[level];
+        const [title, description, items, connection] = levelData[level];
         document.getElementById("level-details").innerHTML =
-          `<div><span class="demo-label">Example focus areas</span><h3 class="detail-title">${title}</h3><p class="detail-copy">${description}</p></div><ul class="detail-list">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+          `<div><span class="demo-label">Example focus areas</span><h3 class="detail-title">${title}</h3><p class="detail-copy">${description}</p></div><ul class="detail-list">${items.map((item) => `<li>${item}</li>`).join("")}</ul><p class="detail-connection"><strong>Connection to the next level:</strong> ${connection}</p>`;
       }
       function showImpact(type, event) {
         const result = document.getElementById("result");
@@ -1557,11 +1683,25 @@
         result.innerHTML = `<span class="demo-label">Illustrative scenario</span><h3>${title}</h3><div class="impact">${cards.map(([heading, text]) => `<div class="impact-card"><strong>${heading}</strong><span>${text}</span></div>`).join("")}</div>`;
         result.style.display = "block";
       }
+      let articleOpener;
       function readArticle(button) {
         const article = button.closest(".article");
         const title = article.querySelector("h3").textContent;
-        button.textContent = "Sample article opened";
-        button.setAttribute("aria-label", `${title} sample article opened`);
+        const summary = article.querySelector("p").textContent;
+        const meta = article.querySelector(".article-meta").textContent.trim();
+        document.getElementById("article-detail-meta").textContent = meta;
+        document.getElementById("article-detail-title").textContent = title;
+        document.getElementById("article-detail-body").textContent =
+          `${summary} This sample article expands the topic for demonstration purposes only and does not report a real announcement or public statistic.`;
+        document.getElementById("article-detail").classList.add("visible");
+        articleOpener = button;
+        document
+          .getElementById("article-detail")
+          .scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      function closeArticle() {
+        document.getElementById("article-detail").classList.remove("visible");
+        if (articleOpener) articleOpener.focus();
       }
       document.querySelectorAll(".system").forEach((card) => {
         const toggle = () => {
