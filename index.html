@@ -129,82 +129,6 @@
       .nav-links a:hover {
         color: var(--green);
       }
-      .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-      }
-      .icon-button,
-      .login-button,
-      .nav-menu-button {
-        border: 1px solid var(--line);
-        background: #fff;
-        color: var(--navy);
-        min-height: 36px;
-        border-radius: 8px;
-        padding: 6px 10px;
-        font-weight: 750;
-        cursor: pointer;
-        position: relative;
-      }
-      .icon-button:hover,
-      .login-button:hover,
-      .nav-menu-button:hover,
-      .icon-button:focus-visible,
-      .login-button:focus-visible,
-      .nav-menu-button:focus-visible {
-        outline: none;
-        border-color: var(--green);
-        color: var(--green);
-      }
-      .notification-count {
-        display: grid;
-        place-items: center;
-        position: absolute;
-        top: -7px;
-        right: -7px;
-        width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        background: var(--saffron);
-        color: #fff;
-        font-size: 0.65rem;
-      }
-      .nav-menu-button {
-        display: none;
-      }
-      .mobile-nav {
-        display: none;
-      }
-      .notification-panel {
-        position: absolute;
-        right: 7%;
-        top: 65px;
-        width: min(360px, calc(100% - 32px));
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        padding: 12px;
-        z-index: 20;
-      }
-      .notification-panel div {
-        padding: 11px;
-        border-bottom: 1px solid #e8edef;
-      }
-      .notification-panel div:last-child {
-        border-bottom: 0;
-      }
-      .notification-panel strong {
-        display: block;
-        color: var(--navy);
-        font-size: 0.86rem;
-        margin: 4px 0;
-      }
-      .notification-panel p {
-        color: var(--muted);
-        font-size: 0.78rem;
-      }
       .status {
         color: var(--green);
         background: #e8f4ee;
@@ -472,6 +396,13 @@
         display: block;
         color: var(--navy);
         margin-bottom: 3px;
+        background: #fff;
+        border: 1px solid #d5e5dc;
+        padding: 11px;
+        border-radius: 8px;
+        color: #365248;
+        font-size: 0.86rem;
+        font-weight: 650;
       }
       .detail-connection {
         grid-column: 1 / -1;
@@ -886,267 +817,6 @@
         padding: 9px 22px 0;
         font-size: 0.88rem;
       }
-      .intelligence-section {
-        background: #fff;
-      }
-      .intelligence-grid,
-      .alert-grid,
-      .dashboard-grid {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 24px;
-      }
-      .ai-card,
-      .alert-card,
-      .login-panel,
-      .dashboard-card {
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: #fff;
-        padding: 24px;
-        box-shadow: 0 4px 16px rgba(22, 48, 67, 0.04);
-      }
-      .ai-card h3,
-      .alert-card h3,
-      .dashboard-card h3 {
-        color: var(--navy);
-        margin: 8px 0;
-      }
-      .ai-form {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        gap: 9px;
-        margin-top: 18px;
-      }
-      .ai-form input {
-        min-width: 0;
-        border: 1px solid #b8c9d2;
-        border-radius: 8px;
-        padding: 11px 12px;
-        color: var(--ink);
-      }
-      .ai-form input:focus {
-        outline: 2px solid #c9e2d5;
-        border-color: var(--green);
-      }
-      .voice-button {
-        border: 1px solid #b8c9d2;
-        background: #fff;
-        border-radius: 8px;
-        padding: 9px 11px;
-        cursor: pointer;
-      }
-      .voice-button.recording {
-        color: #fff;
-        background: #b24a32;
-        border-color: #b24a32;
-      }
-      .suggestions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 13px;
-      }
-      .suggestions button {
-        border: 1px solid #d7e4df;
-        background: #f2f8f5;
-        color: #365248;
-        border-radius: 999px;
-        padding: 6px 10px;
-        font-size: 0.78rem;
-        cursor: pointer;
-        text-align: left;
-      }
-      .suggestions button:hover {
-        border-color: var(--green);
-      }
-      .ai-response {
-        margin-top: 17px;
-        min-height: 116px;
-        border-left: 3px solid var(--green);
-        background: #f2f8f5;
-        padding: 15px;
-        color: #41574e;
-      }
-      .ai-response[aria-busy="true"] {
-        opacity: 0.7;
-      }
-      .response-toolbar {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        align-items: center;
-      }
-      .response-toolbar button {
-        border: 0;
-        background: transparent;
-        color: var(--green);
-        font-weight: 750;
-        cursor: pointer;
-      }
-      .analysis-list {
-        list-style: none;
-        display: grid;
-        gap: 9px;
-        color: var(--muted);
-        font-size: 0.88rem;
-      }
-      .analysis-list strong {
-        color: var(--navy);
-      }
-      .alert-section {
-        background: #f7faf9;
-      }
-      .workflow {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 8px;
-        margin: 20px 0;
-      }
-      .workflow span {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 9px;
-        padding: 10px;
-        color: var(--navy);
-        font-size: 0.78rem;
-        font-weight: 700;
-        text-align: center;
-      }
-      .public-alerts {
-        display: grid;
-        gap: 10px;
-      }
-      .public-alert {
-        border-left: 4px solid var(--green);
-        background: #fff;
-        border: 1px solid var(--line);
-        border-left: 4px solid var(--green);
-        border-radius: 8px;
-        padding: 13px;
-      }
-      .public-alert .status-pill {
-        float: right;
-      }
-      .status-pill {
-        display: inline-block;
-        border-radius: 999px;
-        padding: 3px 7px;
-        background: #e8f4ee;
-        color: var(--green);
-        font-size: 0.65rem;
-        font-weight: 800;
-      }
-      .admin-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 14px;
-      }
-      .admin-actions button {
-        border: 1px solid #b8c9d2;
-        background: #fff;
-        color: var(--navy);
-        border-radius: 7px;
-        padding: 7px 9px;
-        cursor: pointer;
-        font-size: 0.78rem;
-        font-weight: 700;
-      }
-      .admin-actions button:hover {
-        border-color: var(--green);
-        color: var(--green);
-      }
-      .alert-form {
-        display: grid;
-        gap: 10px;
-      }
-      .alert-form input,
-      .alert-form select,
-      .alert-form textarea {
-        width: 100%;
-        border: 1px solid #c6d4da;
-        border-radius: 7px;
-        padding: 9px;
-        font: inherit;
-      }
-      .alert-form textarea {
-        min-height: 72px;
-        resize: vertical;
-      }
-      .login-overlay {
-        position: fixed;
-        inset: 0;
-        display: none;
-        place-items: center;
-        padding: 18px;
-        background: rgba(19, 43, 69, 0.4);
-        z-index: 40;
-      }
-      .login-overlay.visible {
-        display: grid;
-      }
-      .login-panel {
-        width: min(640px, 100%);
-        max-height: 90vh;
-        overflow: auto;
-        position: relative;
-      }
-      .panel-close {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-      }
-      .login-tabs {
-        display: flex;
-        gap: 8px;
-        margin: 17px 0;
-      }
-      .login-tabs button {
-        border: 1px solid var(--line);
-        background: #fff;
-        border-radius: 7px;
-        padding: 8px 10px;
-        cursor: pointer;
-        font-weight: 750;
-      }
-      .login-tabs button.active {
-        color: #fff;
-        background: var(--navy);
-      }
-      .demo-login-form {
-        display: grid;
-        gap: 10px;
-      }
-      .demo-login-form input,
-      .demo-login-form select {
-        border: 1px solid #c6d4da;
-        border-radius: 7px;
-        padding: 10px;
-        font: inherit;
-      }
-      .dashboard-card {
-        display: none;
-        margin-top: 17px;
-        background: #f3f8f5;
-      }
-      .dashboard-card.visible {
-        display: block;
-      }
-      .dashboard-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 9px;
-        list-style: none;
-        margin-top: 10px;
-      }
-      .dashboard-list li {
-        background: #fff;
-        border: 1px solid #d7e4df;
-        border-radius: 7px;
-        padding: 9px;
-        font-size: 0.82rem;
-      }
       footer {
         background: var(--navy);
         color: #dce6e9;
@@ -1196,26 +866,6 @@
         .nav-links {
           display: none;
         }
-        .nav-menu-button {
-          display: inline-flex;
-          align-items: center;
-        }
-        .mobile-nav:not([hidden]) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 8px;
-          padding: 10px 0 14px;
-        }
-        .mobile-nav a {
-          border: 1px solid var(--line);
-          border-radius: 7px;
-          padding: 8px;
-          color: var(--navy);
-          font-size: 0.84rem;
-          font-weight: 700;
-          text-align: center;
-          background: #fff;
-        }
         .hero-grid,
         .case-body,
         .help-grid {
@@ -1242,14 +892,6 @@
         }
         .feedback-grid {
           grid-template-columns: 1fr;
-        }
-        .intelligence-grid,
-        .alert-grid,
-        .dashboard-grid {
-          grid-template-columns: 1fr;
-        }
-        .workflow {
-          grid-template-columns: repeat(3, 1fr);
         }
       }
       @media (max-width: 600px) {
@@ -1334,66 +976,13 @@
         <a class="logo" href="#home">🇮🇳 INDIA <span>AS A SYSTEM</span></a>
         <div class="nav-links">
           <a href="#home">Home</a><a href="#system-scale">System Scale</a
+          <a href="#system-scale">System Scale</a
           ><a href="#connected-systems">Connected Systems</a
           ><a href="#news">News &amp; Articles</a
           ><a href="#support">Help &amp; Support</a>
         </div>
-        <div class="nav-actions">
-          <button
-            class="icon-button"
-            type="button"
-            onclick="toggleNotifications()"
-            aria-label="Open demo notifications"
-            aria-expanded="false"
-            id="notification-toggle"
-          >
-            🔔<span class="notification-count">3</span>
-          </button>
-          <button class="login-button" type="button" onclick="openLoginPanel()">
-            Login
-          </button>
-          <button
-            class="nav-menu-button"
-            type="button"
-            onclick="toggleMobileNav()"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            ☰
-          </button>
-          <span class="status">● DEMO PLATFORM</span>
-        </div>
+        <span class="status">● DEMO PLATFORM</span>
       </nav>
-      <div class="mobile-nav container" id="mobile-nav" hidden>
-        <a href="#home">Home</a><a href="#system-scale">System Scale</a
-        ><a href="#connected-systems">Connected Systems</a
-        ><a href="#news">News &amp; Articles</a
-        ><a href="#support">Help &amp; Support</a>
-      </div>
-      <aside
-        class="notification-panel container"
-        id="notification-panel"
-        hidden
-        aria-label="Demo notifications"
-      >
-        <div>
-          <span class="demo-label">Demo notification</span
-          ><strong>Verified public-service update</strong>
-          <p>Illustrative regional service update available for review.</p>
-        </div>
-        <div>
-          <span class="demo-label">Demo notification</span
-          ><strong>New sample article</strong>
-          <p>
-            Illustrative infrastructure report added to the knowledge centre.
-          </p>
-        </div>
-        <div>
-          <span class="demo-label">Demo notification</span
-          ><strong>Published alert</strong>
-          <p>Verified demo alert available in Public Alerts.</p>
-        </div>
-      </aside>
     </header>
     <main>
       <section class="hero" id="home">
@@ -1442,97 +1031,6 @@
             ><span class="tile-icon">▤</span><strong>News &amp; Articles</strong
             ><small>Read sample civic-system stories.</small></a
           >
-        </div>
-      </section>
-      <section class="section intelligence-section" id="ai-intelligence">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">AI-assisted demo</span>
-              <h2>AI System Intelligence</h2>
-            </div>
-            <p>
-              An AI-assisted layer that helps users understand relationships
-              between public systems, analyse verified information, summarise
-              developments, and explore possible system-level effects.
-            </p>
-          </div>
-          <div class="intelligence-grid">
-            <article class="ai-card">
-              <span class="demo-label"
-                >AI-assisted demo — connect an approved AI API for live
-                analysis</span
-              >
-              <form class="ai-form" onsubmit="analyseWithAI(event)">
-                <input
-                  id="ai-question"
-                  aria-label="Ask an illustrative public systems question"
-                  placeholder="Ask about connected public systems…"
-                /><button
-                  class="voice-button"
-                  type="button"
-                  onclick="startVoiceInput()"
-                  aria-label="Use voice input"
-                >
-                  🎙️</button
-                ><button class="button primary" type="submit">
-                  Analyse with AI
-                </button>
-              </form>
-              <div class="suggestions" aria-label="Example questions">
-                <button type="button" onclick="useSuggestion(this)">
-                  What could happen if rainfall decreases in a district?</button
-                ><button type="button" onclick="useSuggestion(this)">
-                  How are agriculture and healthcare connected?</button
-                ><button type="button" onclick="useSuggestion(this)">
-                  What systems could be affected by a major infrastructure
-                  project?
-                </button>
-              </div>
-              <div class="ai-response" id="ai-response" aria-live="polite">
-                <div class="response-toolbar">
-                  <strong>Demo AI response</strong
-                  ><button
-                    type="button"
-                    onclick="speakAIResponse()"
-                    aria-label="Read AI response aloud"
-                  >
-                    🔊 Listen
-                  </button>
-                </div>
-                <p id="ai-response-text">
-                  Ask a question or choose an example to see an illustrative
-                  analysis. No live AI backend is connected.
-                </p>
-              </div>
-            </article>
-            <aside class="ai-card">
-              <span class="demo-label">Human review required</span>
-              <h3>AI supports analysis, not allegations.</h3>
-              <ul class="analysis-list">
-                <li>
-                  <strong>Analysis:</strong> identifies possible system
-                  relationships.
-                </li>
-                <li>
-                  <strong>Evidence:</strong> should be reviewed against verified
-                  sources.
-                </li>
-                <li>
-                  <strong>Source:</strong> must be recorded by an authorised
-                  reviewer.
-                </li>
-                <li>
-                  <strong>Verification state:</strong> AI output remains
-                  illustrative until reviewed.
-                </li>
-                <li>
-                  <strong>Recommended action:</strong> human/admin review before
-                  any public alert.
-                </li>
-              </ul>
-            </aside>
-          </div>
         </div>
       </section>
       <section class="section scale-section" id="system-scale">
@@ -1671,118 +1169,506 @@
           </div>
         </div>
       </section>
-      <section class="section alert-section" id="public-alerts">
+      <section class="section" id="connected-systems">
         <div class="container">
           <div class="section-heading">
             <div>
-              <span class="eyebrow">Verified-publication workflow</span>
-              <h2>Public Alerts</h2>
+              <span class="eyebrow">Interdependent services</span>
+              <h2>Connected Systems</h2>
             </div>
             <p>
-              Illustrative alerts use neutral language. AI may assist with
-              analysis, but a human/admin must verify information before a
-              public notification is published.
+              Explore representative sectors that shape daily life. Select a
+              card to bring it into focus and see how it can relate to other
+              public systems.
             </p>
           </div>
-          <div class="workflow" aria-label="Public alert workflow">
-            <span>Verified information</span><span>AI-assisted analysis</span
-            ><span>Potential issue detected</span
-            ><span>Human/Admin verification</span><span>Public alert</span
-            ><span>User notification</span>
-          </div>
-          <div class="alert-grid">
-            <div
-              class="public-alerts"
-              aria-live="polite"
-              id="public-alert-list"
+          <div class="systems">
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
             >
-              <article class="public-alert">
-                <span class="status-pill">VERIFIED · DEMO</span>
-                <h3>Important public-service update</h3>
-                <p>
-                  Illustrative verified update for a selected region. Source and
-                  evidence would be reviewed before production publication.
-                </p>
-              </article>
-              <article class="public-alert">
-                <span class="status-pill">PUBLISHED · DEMO</span>
-                <h3>Project progress requires verification</h3>
-                <p>
-                  Potential discrepancy detected — verification required. This
-                  neutral example does not establish wrongdoing.
-                </p>
-              </article>
-            </div>
-            <article class="alert-card">
-              <span class="demo-label">Admin verification demo</span>
-              <h3>Review and publish workflow</h3>
+              <div class="icon">🌾</div>
+              <h3>Agriculture</h3>
               <p>
-                Demo controls model the lifecycle of a public alert. Only
-                VERIFIED or PUBLISHED items belong in public notifications.
+                Food, water, farming practices and supply chains; connected to
+                markets, transport and environment.
               </p>
-              <div class="admin-actions">
-                <button type="button" onclick="setAlertStatus('DRAFT')">
-                  Create Alert</button
-                ><button type="button" onclick="setAlertStatus('UNDER REVIEW')">
-                  Review Alert</button
-                ><button type="button" onclick="setAlertStatus('VERIFIED')">
-                  Verify Alert</button
-                ><button type="button" onclick="setAlertStatus('PUBLISHED')">
-                  Publish Alert</button
-                ><button type="button" onclick="setAlertStatus('ARCHIVED')">
-                  Archive Alert
-                </button>
-              </div>
-              <p id="alert-status" class="detail-copy" aria-live="polite">
-                Current demo status: DRAFT
-              </p>
-              <details>
-                <summary>Demo alert record fields</summary>
-                <form
-                  class="alert-form"
-                  onsubmit="
-                    event.preventDefault();
-                    setAlertStatus('UNDER REVIEW');
-                  "
-                >
-                  <input aria-label="Alert title" placeholder="Title" />
-                  <textarea
-                    aria-label="Alert description"
-                    placeholder="Description"
-                  ></textarea>
-                  <input type="date" aria-label="Alert date" />
-                  <input aria-label="Region" placeholder="Region" />
-                  <input
-                    aria-label="Related system"
-                    placeholder="Related system"
-                  />
-                  <input aria-label="Source" placeholder="Source" />
-                  <input
-                    aria-label="Evidence"
-                    placeholder="Evidence reference"
-                  />
-                  <select aria-label="Verification status">
-                    <option>DRAFT</option>
-                    <option>UNDER REVIEW</option>
-                    <option>VERIFIED</option>
-                    <option>PUBLISHED</option>
-                    <option>ARCHIVED</option>
-                  </select>
-                  <select aria-label="Severity">
-                    <option>Low severity</option>
-                    <option>Moderate severity</option>
-                    <option>High severity</option>
-                  </select>
-                  <input
-                    aria-label="Related article"
-                    placeholder="Related article"
-                  />
-                  <button class="button secondary" type="submit">
-                    Save demo record for review
-                  </button>
-                </form>
-              </details>
             </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🏥</div>
+              <h3>Healthcare</h3>
+              <p>
+                Care access, facilities and prevention; connected to water,
+                transport and digital services.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🎓</div>
+              <h3>Education</h3>
+              <p>
+                Learning access, skills and workforce; connected to transport,
+                digital services and employment.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🚆</div>
+              <h3>Transport</h3>
+              <p>
+                Roads, railways and mobility; connected to market access, care
+                and education.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">⚡</div>
+              <h3>Energy</h3>
+              <p>
+                Reliable power for homes and enterprise; connected to
+                healthcare, industry and digital access.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">▣</div>
+              <h3>Digital Services</h3>
+              <p>
+                Accessible digital public-service pathways; connected to
+                finance, education and service access.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">₹</div>
+              <h3>Finance</h3>
+              <p>
+                Household resilience and local enterprise; connected to
+                livelihoods, agriculture and services.
+              </p>
+            </article>
+            <article
+              class="system"
+              role="button"
+              aria-pressed="false"
+              tabindex="0"
+            >
+              <div class="icon">🌱</div>
+              <h3>Environment</h3>
+              <p>
+                Water, climate resilience and natural resources; connected to
+                agriculture, health and infrastructure.
+              </p>
+            </article>
+          </div>
+          <div class="whatif">
+            <h2>🔮 What-If Engine</h2>
+            <p>
+              Select a scenario and see how one change can affect multiple
+              connected systems. These are illustrative pathways only.
+            </p>
+            <div class="scenario">
+              <button type="button" onclick="showImpact('hospital', event)">
+                🏥 New Hospital</button
+              ><button type="button" onclick="showImpact('industry', event)">
+                🏭 New Industry</button
+              ><button type="button" onclick="showImpact('road', event)">
+                🛣️ New Highway</button
+              ><button type="button" onclick="showImpact('rainfall', event)">
+                🌧️ Low Rainfall
+              </button>
+            </div>
+            <div id="result" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section news-section" id="news">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Knowledge centre</span>
+              <h2>News &amp; Articles</h2>
+            </div>
+            <p>
+              Sample articles show the kinds of neutral, public-systems topics
+              this platform could make easier to explore.
+            </p>
+          </div>
+          <div class="article-grid">
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Public services · 12 Sep 2026</span>
+              </div>
+              <h3>Designing easier journeys to essential services</h3>
+              <p>
+                An illustrative look at how clearer service information can help
+                people navigate local public systems with greater confidence.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Infrastructure · 05 Sep 2026</span>
+              </div>
+              <h3>Connecting infrastructure planning with community needs</h3>
+              <p>
+                This demonstration story considers how transport, water and
+                social infrastructure can be viewed together during planning.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+            <article class="article">
+              <div class="article-meta">
+                <span class="demo-label">Sample article</span
+                ><span>Education · 28 Aug 2026</span>
+              </div>
+              <h3>Learning access as a connected system</h3>
+              <p>
+                A sample perspective on the relationships between schools,
+                connectivity, transport and local support for learners.
+              </p>
+              <button
+                class="button secondary"
+                type="button"
+                onclick="readArticle(this)"
+              >
+                Read Article
+              </button>
+            </article>
+          </div>
+          <article
+            class="article-detail"
+            id="article-detail"
+            aria-live="polite"
+            aria-label="Sample article detail"
+          >
+            <div class="article-detail-header">
+              <div>
+                <span class="demo-label" id="article-detail-meta"
+                  >Sample article</span
+                >
+                <h3 id="article-detail-title">Sample article detail</h3>
+              </div>
+              <button
+                class="article-close"
+                type="button"
+                onclick="closeArticle()"
+              >
+                Close
+              </button>
+            </div>
+            <p id="article-detail-body"></p>
+          </article>
+        </div>
+      </section>
+      <section class="section impact-section" id="public-impact">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Illustrative outcomes</span>
+              <h2>Public Impact</h2>
+            </div>
+            <p>
+              All figures in this section are DEMO DATA, intended solely to
+              demonstrate a clear way of presenting service and project
+              outcomes.
+            </p>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>12,500</strong
+              ><span>People reached</span>
+              <div class="meter"><i style="width: 78%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>36</strong
+              ><span>Services improved</span>
+              <div class="meter"><i style="width: 64%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>240</strong
+              ><span>Jobs supported</span>
+              <div class="meter"><i style="width: 71%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>18</strong
+              ><span>Infrastructure assets supported</span>
+              <div class="meter"><i style="width: 69%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="demo-label">Demo data</span><strong>₹6.8cr</strong
+              ><span>Estimated funds used</span>
+              <div class="meter"><i style="width: 82%"></i></div>
+            </div>
+          </div>
+          <article class="case-study">
+            <div class="case-header">
+              <div>
+                <span class="demo-label">Demo data · example case study</span>
+                <h3>Sample Infrastructure Improvement Project</h3>
+                <p>
+                  An example of how allocation, use, progress and public impact
+                  could be presented transparently.
+                </p>
+              </div>
+              <span class="demo-label">Illustrative only</span>
+            </div>
+            <div class="case-body">
+              <div class="funding-list">
+                <div class="funding-item">
+                  <span>Total allocated amount</span
+                  ><strong>₹10.0 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Amount used</span><strong>₹6.8 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Remaining amount</span><strong>₹3.2 crore</strong>
+                </div>
+                <div class="funding-item">
+                  <span>Project progress</span><strong>68% complete</strong>
+                </div>
+                <div class="funding-item">
+                  <span>People / services impacted</span
+                  ><strong>Illustrative: 12,500</strong>
+                </div>
+              </div>
+              <div>
+                <p class="chart-title">
+                  Illustrative Project Funding &amp; Impact
+                </p>
+                <div class="bar-row">
+                  <span>Planned funding</span>
+                  <div class="bar">
+                    <i class="allocated" style="width: 100%"></i>
+                  </div>
+                  <strong>₹10.0cr</strong>
+                </div>
+                <div class="bar-row">
+                  <span>Used</span>
+                  <div class="bar"><i class="used" style="width: 68%"></i></div>
+                  <strong>₹6.8cr</strong>
+                </div>
+                <div class="bar-row">
+                  <span>People reached*</span>
+                  <div class="bar">
+                    <i class="remaining" style="width: 83%"></i>
+                  </div>
+                  <strong>12.5k</strong>
+                </div>
+                <div class="legend">
+                  <span><i class="allocated"></i>Allocated</span
+                  ><span><i class="used"></i>Used</span
+                  ><span><i class="remaining"></i>People reached*</span>
+                </div>
+                <p class="chart-note">
+                  *Illustrative scaled indicator; not a real public statistic.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="feedback">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Illustrative voices</span>
+              <h2>Public Response</h2>
+            </div>
+            <p>
+              These examples are clearly labelled Sample Public Feedback. They
+              are not statements from real citizens.
+            </p>
+          </div>
+          <div class="feedback-grid">
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “The service journey is easier to understand when local support
+                information is shown in one place.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “Seeing transport and healthcare together helps explain how
+                access can improve for a community.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+            <article class="feedback">
+              <span class="demo-label">Sample Public Feedback</span>
+              <p>
+                “The example dashboards make public-system information feel
+                clearer and more approachable.”
+              </p>
+              <strong>Sample citizen feedback</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section help-section" id="support">
+        <div class="container help-grid">
+          <div class="help-copy">
+            <span class="eyebrow">Help &amp; Support</span>
+            <h3>Understand the system, at your own pace.</h3>
+            <p>
+              Start with System Scale, select a level, then explore connected
+              sectors and the What-If Engine. All project and impact values on
+              this page are examples.
+            </p>
+            <div class="support-box">
+              <strong>Support placeholder:</strong>&nbsp;
+              support@indiaasasystem.example
+            </div>
+          </div>
+          <div class="faq">
+            <details open>
+              <summary>How does the system work?</summary>
+              <p>
+                It organizes example public-service themes across administrative
+                levels, then shows how connected systems may influence one
+                another.
+              </p>
+            </details>
+            <details>
+              <summary>How do I navigate System Scale?</summary>
+              <p>
+                Select Village, District, State, National or Global. The example
+                focus areas update below the selected scale card.
+              </p>
+            </details>
+            <details>
+              <summary>Are the figures and articles real?</summary>
+              <p>
+                No. All articles, feedback, metrics and case-study figures are
+                prominently labelled as sample or demo content.
+              </p>
+            </details>
+            <details>
+              <summary>How do I use What-If scenarios?</summary>
+              <p>
+                Choose one scenario to reveal an illustrative pathway across
+                connected systems. These pathways are examples, not forecasts.
+              </p>
+            </details>
+            <details>
+              <summary>Where can I get support?</summary>
+              <p>
+                Use the placeholder support contact above. A production version
+                can replace it with an approved support channel.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+          </div>
+          <div class="levels" role="group" aria-label="Select a system scale">
+            <button
+              class="level active"
+              type="button"
+              onclick="selectLevel('Village', event)"
+              aria-pressed="true"
+            >
+              <span class="level-icon">🏘️</span><strong>Village</strong
+              ><small>Local services</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('District', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🏙️</span><strong>District</strong
+              ><small>Regional delivery</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('State', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🗺️</span><strong>State</strong
+              ><small>Statewide systems</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('National', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🇮🇳</span><strong>National</strong
+              ><small>India-wide view</small></button
+            ><button
+              class="level"
+              type="button"
+              onclick="selectLevel('Global', event)"
+              aria-pressed="false"
+            >
+              <span class="level-icon">🌐</span><strong>Global</strong
+              ><small>International links</small>
+            </button>
+          </div>
+          <div class="level-details" id="level-details" aria-live="polite">
+            <div>
+              <span class="demo-label">Example focus areas</span>
+              <h3 class="detail-title">Village level</h3>
+              <p class="detail-copy">
+                Illustrative local systems and everyday services.
+              </p>
+            </div>
+            <ul class="detail-list">
+              <li>Local infrastructure</li>
+              <li>Water and sanitation</li>
+              <li>Agriculture</li>
+              <li>Schools</li>
+              <li>Primary healthcare</li>
+              <li>Local services</li>
+            </ul>
+            <p class="detail-connection">
+              <strong>Connection to the next level:</strong> Village needs and
+              service outcomes can inform district planning and coordination.
+            </p>
           </div>
         </div>
       </section>
@@ -1904,45 +1790,6 @@
                 agriculture, health and infrastructure.
               </p>
             </article>
-            <article
-              class="system"
-              role="button"
-              aria-pressed="false"
-              tabindex="0"
-            >
-              <div class="icon">💧</div>
-              <h3>Water</h3>
-              <p>
-                Water access, quality and resilience; connected to health,
-                agriculture and local services.
-              </p>
-            </article>
-            <article
-              class="system"
-              role="button"
-              aria-pressed="false"
-              tabindex="0"
-            >
-              <div class="icon">🏗️</div>
-              <h3>Infrastructure</h3>
-              <p>
-                Shared public assets and maintenance; connected to mobility,
-                services and employment.
-              </p>
-            </article>
-            <article
-              class="system"
-              role="button"
-              aria-pressed="false"
-              tabindex="0"
-            >
-              <div class="icon">🤝</div>
-              <h3>Employment</h3>
-              <p>
-                Livelihood opportunities and skills; connected to education,
-                industry and local markets.
-              </p>
-            </article>
           </div>
           <div class="whatif">
             <h2>🔮 What-If Engine</h2>
@@ -1988,11 +1835,6 @@
                 An illustrative look at how clearer service information can help
                 people navigate local public systems with greater confidence.
               </p>
-              <p>
-                <strong>Region:</strong> Illustrative local context ·
-                <strong>Related systems:</strong> Digital Services, Healthcare ·
-                <strong>Source:</strong> Demo editorial brief
-              </p>
               <button
                 class="button secondary"
                 type="button"
@@ -2011,11 +1853,6 @@
                 This demonstration story considers how transport, water and
                 social infrastructure can be viewed together during planning.
               </p>
-              <p>
-                <strong>Region:</strong> Illustrative district context ·
-                <strong>Related systems:</strong> Transport, Water ·
-                <strong>Source:</strong> Demo editorial brief
-              </p>
               <button
                 class="button secondary"
                 type="button"
@@ -2033,11 +1870,6 @@
               <p>
                 A sample perspective on the relationships between schools,
                 connectivity, transport and local support for learners.
-              </p>
-              <p>
-                <strong>Region:</strong> Illustrative state context ·
-                <strong>Related systems:</strong> Education, Transport ·
-                <strong>Source:</strong> Demo editorial brief
               </p>
               <button
                 class="button secondary"
@@ -2078,12 +1910,12 @@
           <div class="section-heading">
             <div>
               <span class="eyebrow">Illustrative outcomes</span>
-              <h2>Public Outcomes</h2>
+              <h2>Public Impact</h2>
             </div>
             <p>
-              Illustrative demo metrics — not live government data. All figures
-              in this section are DEMO DATA, intended solely to demonstrate a
-              clear way of presenting service and project outcomes.
+              All figures in this section are DEMO DATA, intended solely to
+              demonstrate a clear way of presenting service and project
+              outcomes.
             </p>
           </div>
           <div class="metric-grid">
@@ -2146,9 +1978,6 @@
                 </div>
               </div>
               <div>
-                <span class="demo-label"
-                  >Demo / illustrative data — not live government data</span
-                >
                 <p class="chart-title">
                   Illustrative Project Funding &amp; Impact
                 </p>
@@ -2163,11 +1992,6 @@
                   <span>Used</span>
                   <div class="bar"><i class="used" style="width: 68%"></i></div>
                   <strong>₹6.8cr</strong>
-                </div>
-                <div class="bar-row">
-                  <span>Project progress</span>
-                  <div class="bar"><i class="used" style="width: 68%"></i></div>
-                  <strong>68%</strong>
                 </div>
                 <div class="bar-row">
                   <span>People reached*</span>
@@ -2275,29 +2099,6 @@
               </p>
             </details>
             <details>
-              <summary>How does AI analysis work in this demo?</summary>
-              <p>
-                Demo AI responses illustrate system relationships only. Connect
-                an approved API and verified sources before using live analysis.
-              </p>
-            </details>
-            <details>
-              <summary>How are public alerts verified?</summary>
-              <p>
-                Verified information is reviewed by a human/admin before it can
-                be marked VERIFIED or PUBLISHED. AI cannot independently
-                establish wrongdoing.
-              </p>
-            </details>
-            <details>
-              <summary>How can I report an issue?</summary>
-              <p>
-                Use the support placeholder for this demonstration. A production
-                service should provide an approved reporting channel and
-                evidence-handling process.
-              </p>
-            </details>
-            <details>
               <summary>Where can I get support?</summary>
               <p>
                 Use the placeholder support contact above. A production version
@@ -2308,83 +2109,6 @@
         </div>
       </section>
     </main>
-    <div
-      class="login-overlay"
-      id="login-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="login-title"
-    >
-      <section class="login-panel">
-        <button
-          class="article-close panel-close"
-          type="button"
-          onclick="closeLoginPanel()"
-          aria-label="Close login panel"
-        >
-          Close
-        </button>
-        <span class="demo-label"
-          >Demo authentication — backend authentication required for
-          production</span
-        >
-        <h2 id="login-title">Access demo workspace</h2>
-        <p class="detail-copy">
-          No password is requested, stored or transmitted in this frontend
-          demonstration.
-        </p>
-        <div class="login-tabs" role="tablist">
-          <button
-            type="button"
-            class="active"
-            role="tab"
-            aria-selected="true"
-            onclick="selectLoginRole('user', event)"
-          >
-            User Login</button
-          ><button
-            type="button"
-            role="tab"
-            aria-selected="false"
-            onclick="selectLoginRole('admin', event)"
-          >
-            Admin Login
-          </button>
-        </div>
-        <form class="demo-login-form" onsubmit="completeDemoLogin(event)">
-          <label for="demo-region">Selected region</label
-          ><select id="demo-region">
-            <option>Illustrative local region</option>
-            <option>Illustrative district region</option>
-            <option>Illustrative state region</option></select
-          ><button class="button primary" type="submit">
-            Continue with demo access
-          </button>
-        </form>
-        <article class="dashboard-card" id="user-dashboard">
-          <span class="demo-label">User dashboard · demo</span>
-          <h3>Selected-region overview</h3>
-          <ul class="dashboard-list">
-            <li>Notifications: 3 demo updates</li>
-            <li>Relevant public alerts: verified examples</li>
-            <li>Saved systems: Agriculture, Water</li>
-            <li>Recent articles: 3 demo articles</li>
-            <li>AI assistant: illustrative analysis</li>
-          </ul>
-        </article>
-        <article class="dashboard-card" id="admin-dashboard">
-          <span class="demo-label">Admin dashboard · demo</span>
-          <h3>Alert administration overview</h3>
-          <ul class="dashboard-list">
-            <li>Overview: demo metrics</li>
-            <li>Create / Edit / Review alerts</li>
-            <li>Verify / Reject / Publish / Archive</li>
-            <li>Manage demo articles</li>
-            <li>Evidence and source review required</li>
-          </ul>
-        </article>
-      </section>
-    </div>
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -2471,8 +2195,6 @@
             "Education",
             "Digital services",
             "National programmes",
-            "Defence",
-            "Energy",
           ],
           "National infrastructure and programmes can connect India’s systems with international partners and standards.",
         ],
@@ -2503,10 +2225,6 @@
           "Illustrative first-contact health services, preventive care and referral pathways.",
         "Local services":
           "Example local administration and essential-service touchpoints for residents.",
-        "Local roads":
-          "Illustrative local mobility links that support access to schools, health and markets.",
-        "Panchayat services":
-          "Example local self-governance and community service coordination.",
         "District administration":
           "Illustrative district coordination that connects local needs with regional planning.",
         Hospitals:
@@ -2517,10 +2235,6 @@
           "Example road networks that connect communities, services and markets across a district.",
         "Public services":
           "Illustrative coordinated services that can be delivered across district communities.",
-        "Agriculture markets":
-          "Illustrative district-level market access, storage and agricultural trade linkages.",
-        "Water systems":
-          "Example district water planning, distribution and resilience coordination.",
         "State infrastructure":
           "Example statewide infrastructure networks that support public services and development.",
         Health:
@@ -2529,10 +2243,6 @@
           "Example statewide mobility and transport systems that link people with opportunities.",
         "State-level services":
           "Illustrative state administration and service-delivery pathways.",
-        Power:
-          "Illustrative state power systems that support households, public services and enterprise.",
-        Finance:
-          "Example state finance and resource-allocation systems for public priorities.",
         "National infrastructure":
           "Example nationwide infrastructure that supports connectivity and essential services.",
         Economy:
@@ -2543,10 +2253,6 @@
           "Illustrative digital public-service channels and interoperable service access.",
         "National programmes":
           "Example nationwide programmes that can support common public-service goals.",
-        Defence:
-          "Illustrative national security and resilience systems, shown only as a broad public-system context.",
-        Energy:
-          "Example national energy systems that connect infrastructure, industry and essential services.",
         "International trade":
           "Illustrative links between domestic systems, markets and international trade flows.",
         Technology:
@@ -2594,108 +2300,9 @@
           const detailButton = event.target.closest("[data-detail-key]");
           if (detailButton) selectDetail(detailButton);
         });
-      let activeLoginRole = "user";
-      let loginOpener;
-      function toggleMobileNav() {
-        const nav = document.getElementById("mobile-nav");
-        const button = document.querySelector(".nav-menu-button");
-        nav.hidden = !nav.hidden;
-        button.setAttribute("aria-expanded", String(!nav.hidden));
-      }
-      function toggleNotifications() {
-        const panel = document.getElementById("notification-panel");
-        const button = document.getElementById("notification-toggle");
-        panel.hidden = !panel.hidden;
-        button.setAttribute("aria-expanded", String(!panel.hidden));
-      }
-      function openLoginPanel() {
-        const overlay = document.getElementById("login-overlay");
-        overlay.classList.add("visible");
-        loginOpener = document.activeElement;
-        overlay.querySelector("select").focus();
-      }
-      function closeLoginPanel() {
-        document.getElementById("login-overlay").classList.remove("visible");
-        if (loginOpener) loginOpener.focus();
-      }
-      function selectLoginRole(role, event) {
-        activeLoginRole = role;
-        document.querySelectorAll(".login-tabs button").forEach((button) => {
-          const isSelected = button === event.currentTarget;
-          button.classList.toggle("active", isSelected);
-          button.setAttribute("aria-selected", String(isSelected));
-        });
-      }
-      function completeDemoLogin(event) {
-        event.preventDefault();
-        document
-          .getElementById("user-dashboard")
-          .classList.toggle("visible", activeLoginRole === "user");
-        document
-          .getElementById("admin-dashboard")
-          .classList.toggle("visible", activeLoginRole === "admin");
-      }
-      function setAlertStatus(status) {
-        document.getElementById("alert-status").textContent =
-          `Current demo status: ${status}`;
-      }
-      function useSuggestion(button) {
-        document.getElementById("ai-question").value = button.textContent;
-        document.getElementById("ai-question").focus();
-      }
-      function analyseWithAI(event) {
-        event.preventDefault();
-        const response = document.getElementById("ai-response");
-        const text = document.getElementById("ai-response-text");
-        const question = document.getElementById("ai-question").value.trim();
-        response.setAttribute("aria-busy", "true");
-        text.textContent = "Preparing an illustrative demo analysis…";
-        window.setTimeout(() => {
-          const topic = question || "the selected public-system question";
-          text.textContent = `DEMO AI response: For “${topic}”, the platform would map relationships across water, health, infrastructure, livelihoods and public services. This is an illustrative summary, not verified analysis. Review approved evidence and sources before making any public decision or alert.`;
-          response.setAttribute("aria-busy", "false");
-        }, 450);
-      }
-      function startVoiceInput() {
-        const Recognition =
-          window.SpeechRecognition || window.webkitSpeechRecognition;
-        const responseText = document.getElementById("ai-response-text");
-        if (!Recognition) {
-          responseText.textContent =
-            "Voice input is not supported in this browser.";
-          return;
-        }
-        const recognition = new Recognition();
-        const button = document.querySelector(".voice-button");
-        recognition.lang = "en-IN";
-        recognition.interimResults = false;
-        button.classList.add("recording");
-        recognition.onresult = (event) => {
-          document.getElementById("ai-question").value =
-            event.results[0][0].transcript;
-          button.classList.remove("recording");
-          analyseWithAI({ preventDefault() {} });
-        };
-        recognition.onerror = () => {
-          button.classList.remove("recording");
-          responseText.textContent =
-            "Voice input could not be completed. Please type your question instead.";
-        };
-        recognition.onend = () => button.classList.remove("recording");
-        recognition.start();
-      }
-      function speakAIResponse() {
-        if (!window.speechSynthesis) {
-          document.getElementById("ai-response-text").textContent =
-            "Text-to-speech is not supported in this browser.";
-          return;
-        }
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(
-          new SpeechSynthesisUtterance(
-            document.getElementById("ai-response-text").textContent,
-          ),
-        );
+        const [title, description, items, connection] = levelData[level];
+        document.getElementById("level-details").innerHTML =
+          `<div><span class="demo-label">Example focus areas</span><h3 class="detail-title">${title}</h3><p class="detail-copy">${description}</p></div><ul class="detail-list">${items.map((item) => `<li>${item}</li>`).join("")}</ul><p class="detail-connection"><strong>Connection to the next level:</strong> ${connection}</p>`;
       }
       function showImpact(type, event) {
         const result = document.getElementById("result");
@@ -2769,14 +2376,7 @@
           ],
         };
         const [title, cards] = impacts[type];
-        const pathways = {
-          hospital: "Healthcare → Employment → Transport → Public impact",
-          industry: "Employment → Housing → Infrastructure → Public impact",
-          road: "Connectivity → Markets → Services → Public impact",
-          rainfall:
-            "Water availability → Agriculture → Food supply → Employment → Economy → Public impact",
-        };
-        result.innerHTML = `<span class="demo-label">AI-assisted illustrative analysis</span><h3>${title}</h3><p class="detail-copy"><strong>Example relationship pathway:</strong> ${pathways[type]}</p><div class="impact">${cards.map(([heading, text]) => `<div class="impact-card"><strong>${heading}</strong><span>${text}</span></div>`).join("")}</div>`;
+        result.innerHTML = `<span class="demo-label">Illustrative scenario</span><h3>${title}</h3><div class="impact">${cards.map(([heading, text]) => `<div class="impact-card"><strong>${heading}</strong><span>${text}</span></div>`).join("")}</div>`;
         result.style.display = "block";
       }
       let articleOpener;
